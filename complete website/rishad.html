@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishad</title>
+    <link rel="stylesheet" type="text/css" href="page_editor.css">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Poppins', sans-serif;
+        }
+        .heading2 {
+            font-size: 40px;
+            text-shadow: #2f363e 0px 0px 10px;
+            font-family: MyriadPro-Regular, 'Myriad Pro';
+            margin: 20px 0;
+            letter-spacing: 0em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .name, .roll{
+            font-size: 20px;
+            font-family: MyriadPro-Regular, 'Myriad Pro';
+            margin: 20px 0;
+            letter-spacing: 0em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+        .page-edit{
+            background: rgb(255,255,255);
+            background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(238,255,240,1) 59%, rgba(163,213,163,1) 100%);
+            min-height: 100vh;
+            padding: 100px 15px;
+        }
+        .content-parts{
+            max-width: 1000px;
+            margin:auto;
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        .content-parts::before{
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            background-color: #2f363e;
+            left: calc(50% - 1px);
+        }
+        .content-part{
+            margin-bottom: 40px;
+            width: 100%;
+            position: relative;
+        }
+        .content-part:last-child{
+            margin-bottom: 0;
+        }
+        .content-part:nth-child(odd){
+            padding-right: calc(50% + 30px);
+            text-align: right;
+        }
+        .content-part:nth-child(even){
+            padding-left: calc(50% + 30px);
+        }
+        .timeline-dot{
+            height: 16px;
+            width: 16px;
+            background-color: #eaa023;
+            position: absolute;
+            left: calc(50% - 8px);
+            border-radius: 50%;
+            top:10px;
+        }
+        .timeline-date{
+            font-size: 18px;
+            color: #eaa023;
+            margin:6px 0 15px;
+        }
+        .task{
+            background-color: #2f363e;
+            padding: 30px;
+            border-radius: 5px;
+        }
+        .task h3{
+            font-size: 20px;
+            color: #ffffff;
+            margin:0 0 10px;
+            text-transform: capitalize;
+            font-weight: 500;
+        }
+        .task p{
+            color: #c8c8c8;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 22px;
+        }
+
+        .content-part a {
+            text-decoration: none;
+            color: chartreuse;
+        }
+
+        /* responsive */
+        @media(max-width: 767px){
+            .content-parts::before{
+                left: 7px;
+            }
+            .content-part:nth-child(odd){
+                padding-right: 0;
+                text-align: left;
+            }
+            .content-part:nth-child(odd),
+            .content-part:nth-child(even){
+                padding-left: 37px;
+            }
+            .timeline-dot{
+                left:0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading2">Page editor</h1>
+    <p class="name">M.F.M.Rishad</p>
+    <p class="roll">Student 4</p>
+
+    <section class="page-edit">
+            <div class="content-part">
+                <div class="task">
+                    <h3>Gallery page</h3>
+                    <p>Our gallery page is designed to captivate users with interactive thumbnails that signal their clickable nature upon hover. Clicking on a thumbnail reveals an extended view featuring a larger image and detailed description Each image and description is equipped with appropriate alternative text for accessibility. Additionally, users can personalize their viewing experience by customizing page color and font style within the extended view, enhancing engagement and connection with our content.</p>
+                    <a href="gallery.html">To the Gallery page</a>
+                </div>
+            </div>
+            <div class="content-part">
+                <div class="task">
+                    <h3>Sitemap map</h3>
+                    <p>Our website's sitemap is developed using Scalable Vector Graphics (SVG), offering an interactive and accessible representation of its hierarchical structure. Each page is depicted as a node within the SVG canvas, featuring hover effects and clickable links for seamless navigation. The sitemap is seamlessly integrated into the website's design and adjusts responsively to different screen sizes. Accessibility is prioritized with alt text for each node, and keyboard navigation is supported for enhanced usability.</p>
+                    <a href="sitemap.html">To the SiteMap page</a>
+                </div>
+            </div>
+            <div class="content-part">
+                <div class="task">
+                    <h3>navigation bar</h3>
+                    <p>In the navigation bar section, our team collaborated to create a seamless and intuitive browsing experience for users. Working together, we designed and implemented features such as dropdown menusand responsive layout to ensure easy navigation across the website. </p>
+                    <a href="rishad-content.html">To the Content page</a>
+                </div>
+            </div>
+            <div class="content-part">
+                <div class="task">
+                    <h3>Footer</h3>
+                    <p>As a team, we collaborated to ensure that the footer effectively encapsulates the essence of our website by incorporating both essential information and intuitive navigation options, fostering a cohesive and user-friendly browsing experience. </p>
+                </div>
+            </div>      
+    </section>
+</body>
+</html>

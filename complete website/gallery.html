@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="public/images/logo.png">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+    
+</head>
+<body>
+    <header>
+        <div class="nav-content">
+            <div class="nav-logo">
+                <img src="public/images/logo.png" alt="logo">
+                <p>InHealth</p>
+            </div>
+            <button class="nav-toggle"><img src="public/images/menu.png" alt=""></button>
+            <nav>
+                <ul data-visible="false" id="primary-navigation" class="primary-navigation">
+                    <li class="nav-item">
+                        <a href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sitemap.html">Sitemap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="profile.html">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="team.html">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="feedback.html">Feedback</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="gallery-header">
+        
+        <div class="header-content">
+            <h1>Our services</h1>
+            <p>Experience compassionate care and comprehensive medical services tailored to your needs. From diagnostic screenings to specialized treatments, we're dedicated to your well-being every step of the way.
+            </p>
+        </div>
+        <div class ="button">
+            <button class="btn">Read More</button>
+            
+        </div>        
+    </section>
+
+    <div class="container" id="gallery">
+        <h2 class="title">gallery</h2>
+
+
+        <div class="photo-gallery">
+            <div class="column">
+                <div class="photo">
+                    <img src="public/images/gallery/medium-shot-paramedic-checking-victim.jpg" alt="image 1" class="image-caption" data-heading="24h ambulance services" >
+                    <div class="caption">"Providing swift ambulance service 24/7 across Sri Lanka."
+                    </div>       
+                </div>
+                <div class="photo">
+                    <img src="public/images/gallery/image 2" alt="image 1" class="image-caption" data-heading="Free blood Bank access" >
+                    <div class="caption">"Free emergency blood bank services are readily available to provide life-saving blood transfusions at no cost, ensuring swift assistance for individuals facing critical medical situations requiring blood transfusions."</div>
+                </div>
+                <div class="photo">
+                    <img src="public/images/gallery/image_3" alt="image 1" class="image-caption" data-heading="Free Eye checkups" >
+                    <div class="caption">"Every month, we offer complimentary eye checkups to encourage individuals to prioritize their eye health through regular screenings. These checkups aim to detect any potential eye conditions early on, ensuring timely treatment and maintaining optimal vision for all individuals, regardless of their financial circumstances."</div>
+                </div>
+            </div>
+            
+            <div class="column">
+                <div class="photo">
+                    <img src="public/images/gallery/image-4" alt="image 1" class="image-caption" data-heading="24h emergency care support" >
+                    <div class="caption">Experience peace of mind with our emergency care services available throughout Sri Lanka. Our dedicated network guarantees swift and effective assistance, ensuring your safety no matter where you are. From remote areas to urban centers, our trained professionals are equipped to handle any emergency situation. Trust in our commitment to delivering top-notch care whenever you need it.</div>       
+                </div>
+                <div class="photo">
+                    <img src="public/images/gallery/image-6.jpeg" alt="image 1" class="image-caption" data-heading="online doctor sessions" >
+                    <div class="caption">"Convenient online doctor sessions offered for patients in remote areas, ensuring accessible healthcare from afar."</div>
+                </div>
+                <div class="photo">
+                    <img src="public/images/gallery/image-7.jpeg" alt="image 1" class="image-caption" data-heading="Blood donation camps" >
+                    <div class="caption">"We organize blood donation camps every four months, providing an opportunity for individuals to contribute to saving lives through blood donation. These regular camps aim to ensure a consistent supply of blood for those in need, fostering a culture of altruism and community support."</div>
+                </div>
+            </div>
+            
+            <div class="column">
+                <div class="photo">
+                    <img src="public/images/gallery/image8.webp" alt="image 1" class="image-caption" data-heading="affordable medicines" >
+                    <div class="caption">"Accessible and affordable medicines for everyone, available online for your convenience."</div>       
+                </div>
+                <div class="photo">
+                    <img src="public/images/gallery/image9.jpeg" alt="image 1" class="image-caption" data-heading="24 hours Operation theater" >
+                    <div class="caption">"Operating theater available 24/7 for immediate surgical interventions."</div>
+                </div>
+                <div class="photo">
+                    <img src="public/images/gallery/image-10.jpeg" alt="image 1" class="image-caption" data-heading="24 hours ICU support" >
+                    <div class="caption">ICY unit available 24/7 for immediate surgical interventions.</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="expanded-container" id="expandedContainer">
+        <div class="expanded-container-wrapper">
+          <div class="back-button" id="backButton">
+            <a class="button" variant="secondary">Back</a>
+          </div>
+          <img class="expanded-image" id="expandedImage" src="" alt="" />
+          <div class="expanded-details" id="expandedDetails">
+            <h2 id="expandedHeading"></h2>
+            <p id="expandedCaption"></p>
+          </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>	&#169;2024, InHealth, All Rights Reserved</p>
+        <p>Created by: <span><a href="rishad.html" target="_blank">Mohomed Rishad</a></span>
+    </div>
+
+    <script src="gallery.js"></script>
+    <script src="nav.js"></script>
+</body>
+</html>

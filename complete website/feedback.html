@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="public/images/logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        *{
+            font-family: 'Space Grotesk';
+            box-sizing: border-box;
+            outline: none;
+            color: #fff;
+        }
+
+        .nav-logo p {
+            color: black;
+        }
+
+        .container{
+            width: 800px;
+            background: #000;
+            box-shadow: 0 0 8px rgba(250,250,250,0.6);
+            font-size: 20px;
+            margin-inline: auto;
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                width: 90vw;
+            }
+        }
+
+        .container form{
+            width: 100%;
+            text-align: left;
+            padding: 25px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        form h1{
+            padding: 10px;
+        }
+        .id i{
+            position: absolute;
+            font-size: 20px;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+        form .fields input{
+            width: 100%;
+            height: 50px;
+            margin: 4px 0;
+            border: 1px solid #5c5c5c;
+            border-radius: 3px;
+            background: #181717;
+            padding: 0 15px;
+            padding-right: 45px;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        form .radrad input{
+            margin-top: 15px;
+            margin-bottom: 25px;
+        }
+        form .radrad label{
+            padding-right: 20px;
+        }
+        form .rating label{
+            float: left;
+            padding: 0px 50px 30px 3px;
+            text-align: center;
+        }
+        form .rating input{
+            margin-bottom: 0px;
+        }
+        form textarea{
+            padding: 5px 15px;
+            border: 1px solid #5c5c5c;
+            border-radius: 3px;
+            background: #181717;
+            font-size: 20px;
+            width: 100%;
+            margin: 10px 0;
+        }
+        form button{
+            margin-top: 5px;
+            border: none;
+            background: #B9FF66;
+            color: #222;
+            padding: 10px 0;
+            width: 100%;
+            font-size: 20px;
+            font-weight: 800;
+            cursor: pointer;
+            border-radius: 30px;
+        }
+        form input:focus,
+        form textarea:focus{
+            border: 1px solid #B9FF66;
+            color: #B9FF66;
+            transition: all 0.3s ease;
+        }
+        form input:focus::placeholder,
+        form textarea:focus::placeholder{
+            padding-left: 4px;
+            color: #B9FF66;
+            transition: all 0.3s ease;
+        }
+        form input:focus + i{
+            color: #B9FF66;
+            transition: all 0.3s ease;
+        }
+        form [type=radio]{
+            accent-color: #B9FF66;
+        }
+        form .updates select{
+            padding: 5px 15px;
+            border: 1px solid #5c5c5c;
+            border-radius: 3px;
+            background: #181717;
+            font-size: 20px;
+            width: 100%;
+            margin-top: 8px;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            display: flex;
+            padding-top: 40px;
+            padding-bottom: 20px;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer p {
+            color: black;
+        }
+
+        .footer a {
+            color: blue;
+        }
+
+    </style>
+    <title>Feedback</title>
+</head>
+<body>
+    <header>
+        <div class="nav-content">
+            <div class="nav-logo">
+                <img src="public/images/logo.png" alt="logo">
+                <p>InHealth</p>
+            </div>
+            <button class="nav-toggle"><img src="public/images/menu.png" alt=""></button>
+            <nav>
+                <ul data-visible="false" id="primary-navigation" class="primary-navigation">
+                    <li class="nav-item">
+                        <a href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sitemap.html">Sitemap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="profile.html">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="team.html">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="feedback.html">Feedback</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <form action="https://api.web3forms.com/submit" method="post">
+            <h1>Feedback form</h1>
+            <input type="hidden" name="access_key" value="c129687d-7a92-4564-afa2-f1be89b94135">
+            <div class="fields">
+                <p>Your Name:</p>
+                <input type="text" name="Name" placeholder="Full name" required>
+                <i class="user"></i>
+            </div>
+            <div class="fields">
+                <p>Your Email:</p>
+                <input type="email" name="Email" placeholder="Email address" required>
+                <i class="envelope"></i>
+            </div>
+            <div class="radrad">
+                <p>Was this your first time visiting?</p>
+                <input type="radio" id="True" name="Was this your first time visiting?" value="Yes" required>
+                <label for="True">Yes</label>
+                <input type="radio" id="False" name="Was this your first time visiting?" value="No">
+                <label for="False">No</label>
+            </div>
+            <div class="radrad">
+                <p>Was this website informative and easy to navigate through?</p>
+                <input type="radio" id="True2" name="Was this website informative and easy to navigate through?" value="Yes" required>
+                <label for="True2">Yes</label>
+                <input type="radio" id="False2" name="Was this website informative and easy to navigate through?" value="No">
+                <label for="False2">No</label>
+            </div>
+            <div>
+                <p>If "No" suggest any improvements you'd like to see:</p>
+                <textarea cols="15" rows="5" placeholder="Enter your opinions here.." name="User improvement suggestions"></textarea>
+            </div>
+            <div class="rating">
+                <br><p>How satisfied are you with our services? Choose from 0 to 10, with 1 being "Not satisfied at all!" and 10 being "Extremely satisfied!"</p><br>
+                <label for="one" name="1">1<br>
+                    <input type="radio" id="one" name="How satisfied are you with our services?" value="1" required>
+                </label>
+                <label for="two" name="2">2<br>
+                    <input type="radio" id="two" name="How satisfied are you with our services?" value="2">
+                </label>
+                <label for="three">3<br>
+                    <input type="radio" id="three" name="How satisfied are you with our services?" value="3">
+                </label>
+                <label for="four">4<br>
+                    <input type="radio" id="four" name="How satisfied are you with our services?" value="4">
+                </label>
+                <label for="five">5<br>
+                    <input type="radio" id="five" name="How satisfied are you with our services?" value="5">
+                </label>
+                <label for="six">6<br>
+                    <input type="radio" id="six" name="How satisfied are you with our services?" value="6">
+                </label>
+                <label for="seven">7<br>
+                    <input type="radio" id="seven" name="How satisfied are you with our services?" value="7">
+                </label>
+                <label for="eight">8<br>
+                    <input type="radio" id="eight" name="How satisfied are you with our services?" value="8">
+                </label>
+                <label for="nine">9<br>
+                    <input type="radio" id="nine" name="How satisfied are you with our services?" value="9">
+                </label>
+                <label for="ten">10<br>
+                    <input type="radio" id="ten" name="How satisfied are you with our services?" value="10">
+                </label>
+            </div>
+            <div class="radrad">
+                <p>Would you recommend our services?</p>
+                <input type="radio" id="True3" name="Would you recommend our services?" value="Yes" required>
+                <label for="True3">Yes</label>
+                <input type="radio" id="False3" name="Would you recommend our services?" value="No">
+                <label for="False3">No</label>
+            </div>
+            <div class="updates">
+                <p>Would you like to recieve updates and offers?</p>
+                <label for="select">
+                    <select name="Would you like to recieve updates and offers?" id="select">
+                        <option value="Yes" name="Yes">Yes</option>
+                        <option value="No" name="No">No</option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <p>Do you have any additional questions or requests?</p>
+                <textarea cols="15" rows="5" placeholder="Enter your opinions here.." name="User additional requests"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="footer">
+        <p>	&#169;2024, InHealth. All Rights Reserved</p>
+        <p>Created by: <span><a href="wishmith.html" target="_blank">Wishmith Dissanayake</a></span>
+    </div>
+
+
+    <script src="nav.js"></script>
+</body>
+</html>

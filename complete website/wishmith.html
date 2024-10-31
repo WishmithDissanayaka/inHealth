@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="editor.css">
+    <link rel="icon" href="public/images/logo.png">
+    <title>Page Editor</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Space Grotesk';
+            box-sizing: border-box;
+        }
+        body{
+            background: #076911a2;
+        }
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+        a:hover{
+            color: #10841c;
+            text-decoration: underline;
+            transition: 1s;
+        }
+        p{
+            margin-bottom: 10px;
+        }
+        h2{
+            margin-bottom: 10px;
+        }
+        .edit-head{
+            background-color: black;
+            margin-bottom: 50px;
+        }
+        .edit-head h1{
+            text-align: center;
+            color: #fff;
+        }
+        .usename{
+            text-align: center;
+            color: #000;
+        }
+        .timeline{
+            position: relative;
+            max-width: 1200px;
+            margin: 100px auto;
+        }
+        .container{
+            padding: 10px 50px;
+            position: relative;
+            width: 50%;
+            animation: movedown 1s linear forwards;
+            opacity: 0;
+        }
+        @keyframes movedown{
+            0%{
+                opacity: 1;
+                transform: translateY(-30px);
+            }
+            100%{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+        .container:nth-child(1){
+            animation-delay: 0s;
+        }
+        .container:nth-child(2){
+            animation-delay: 1s;
+        }
+        .container:nth-child(3){
+            animation-delay: 2s;
+        }
+        .container:nth-child(4){
+            animation-delay: 3s;
+        }
+        .textbox{
+            padding: 20px 30px;
+            background: #fff;
+            position: relative;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+        .left-container{
+            left: 0;
+        }
+        .right-container{
+            left: 50%;
+        }
+        .container img{
+            position: absolute;
+            width: 40px;
+            border-radius: 50%;
+            right: -20px;
+            top: 32px;
+            z-index: 10;
+        }
+        .right-container img{
+            left: -20px;
+        }
+        .timeline::after{
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 100%;
+            background: #fff;
+            top: 0;
+            left: 50%;
+            margin-left: -3px;
+            z-index: -1;
+            animation: moveline 6s linear forwards;
+        }
+        @keyframes moveline{
+            0%{
+                height: 0;
+            }
+            100%{
+                height: 100%;
+            }
+        }
+        .textbox h2{
+            font-weight: 600;
+        }
+        .textbox small{
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        .left-container-arrow{
+            height: 0;
+            width: 0;
+            position: absolute;
+            top: 28px;
+            z-index: 1;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 15px solid #fff;
+            right: -15px;
+        }
+        .right-container-arrow{
+            height: 0;
+            width: 0;
+            position: absolute;
+            top: 28px;
+            z-index: 1;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-right: 15px solid #fff;
+            left: -15px;
+        }
+
+        @media screen and (max-width: 600px){
+
+            .timeline{
+                margin: 50px auto;
+            }
+            .timeline::after{
+                left: 31px;
+            }
+            .container{
+                width: 100%;
+                padding-left: 80px;
+                padding-right: 25px;
+            }
+            .textbox{
+                font-size: 13px;
+            }
+            .textbox small{
+                margin-bottom: 10px;
+            }
+            .right-container{
+                left: 0;
+            }
+            .left-container img, .right-container img{
+                left: 10px;
+            }
+            .left-container-arrow, .right-container-arrow{
+                border-right: 15px solid #fff;
+                border-left: 0;
+                left: -15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="edit-head">
+        <h1 class="edit-head">Page Editor</h1>
+    </div>
+    <div class="usename">
+        <p>Name: Wishmith Dissanayaka</p>
+        <p>Role: Student 2</p>
+    </div>
+    <div class="timeline">
+        <div class="container left-container">
+            <img src="public/images/logo.png">
+            <div class="textbox">
+                <h2>Homepage</h2>
+                <p>This is your gateway to healthy living.<br>Created the general layout of the homepage along with a card grid to link all the content pages together.</p>
+                <a href="homepage.html">To the homepage</a>
+                <span class="left-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container right-container">
+            <img src="public/images/logo.png">
+            <div class="textbox">
+                <h2>Feedback</h2>
+                <p>This is where you tell us how to be better.<br> Created an intuitive feedback form using HTML and CSS. The users answers are sent to an email upon submission.</p>
+                <a href="feedback.html">To the feedback page</a>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container left-container">
+            <img src="public/images/logo.png">
+            <div class="textbox">
+                <h2>Content</h2>
+                <p>A briefing on the importance of accessible healthcare.</p>
+                <a href="wishmith-content.html">To the content page</a>
+                <span class="left-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container right-container">
+            <img src="public/images/logo.png">
+            <div class="textbox">
+                <h2>Navigation Bar</h2>
+                <p>Created the navigation bar using HTML, CSS and made it interactive using JavaScript.</p>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

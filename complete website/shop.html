@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="public/images/logo.png">
+    <title>Shop</title>
+</head>
+<body>
+
+    <header>
+        <div class="nav-content">
+            <div class="nav-logo">
+                <img src="public/images/logo.png" alt="logo">
+                <p>InHealth</p>
+            </div>
+            <button class="nav-toggle"><img src="public/images/menu.png" alt=""></button>
+            <nav>
+                <ul data-visible="false" id="primary-navigation" class="primary-navigation">
+                    <li class="nav-item">
+                        <a href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sitemap.html">Sitemap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="profile.html">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="team.html">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="feedback.html">Feedback</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="shop-content">
+        <div class="shop-header">
+            <img src="public/images/shop/shopbg.jpg" alt="">
+            <div class="shop-header-text">
+                <h1>Shop</h1>
+                <p>Home > Shop</p>
+            </div>
+        </div>
+
+        <div class="shop-sort-menu">
+            <p>showing 1 - 4 of 4 results</p>
+        </div>
+
+        <div class="shop-item-list">
+            <div class="shop-item-card" data-id="1">
+                <div class="shop-item-image">
+                    <img src="public/images/shop/product1.jpg" alt="Medical Kit">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="shop-item-details">
+                    <h3 class="shop-item-name">Medical Kit</h3>
+                    <p class="shop-item-description">Standard First Aid Kit</p>
+                    <p class="shop-item-price">10,000 LKR</p>
+                </div>
+            </div>
+
+            <div class="shop-item-card" data-id="2">
+                <div class="shop-item-image">
+                    <img src="public/images/shop/thermometer.jpg" alt="thermometer">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="shop-item-details">
+                    <h3 class="shop-item-name">Thermometer</h3>
+                    <p class="shop-item-description">Medical use thermometer</p>
+                    <p class="shop-item-price">1,500 LKR</p>
+                </div>
+            </div>
+
+            <div class="shop-item-card" data-id="3">
+                <div class="shop-item-image">
+                    <img src="public/images/shop/bloodPressureMonitor.jpeg" alt="Blood pressure monitor">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="shop-item-details">
+                    <h3 class="shop-item-name">Blood pressure monitor</h3>
+                    <p class="shop-item-description">Standard First Aid Kit</p>
+                    <p class="shop-item-price">8,000 LKR</p>
+                </div>
+            </div>
+
+            <div class="shop-item-card" data-id="4">
+                <div class="shop-item-image">
+                    <img src="public/images/shop/masks.jpg" alt="Face masks">
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="shop-item-details">
+                    <h3 class="shop-item-name">Face masks</h3>
+                    <p class="shop-item-description">Disposable face masks 50pcs</p>
+                    <p class="shop-item-price">1,000 LKR</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="shop-cart">
+            <div class="shop-cart-content">
+                <div class="shop-cart-list">
+                    <div class="shop-cart-header">
+                        <p>Product</p>
+                        <p>Price</p>
+                        <p>Quantity</p>
+                    </div>
+
+                    <div class="shop-cart-items">                        
+                    </div>
+
+                </div>
+                <div class="shop-cart-total">
+                    <h2>Cart Totals</h2>
+                    <p class="sub-total">Subtotal<span id="sub-total-span">0.00 LKR</span></p>
+                    <p class="total">Total<span id="total-span">0.00 LKR</span></p>
+                    <button class="check-out">Check Out</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="shop-feature-tab">
+            <div class="shop-feature">
+                <img src="public/images/shop/trophy1.png" alt="">
+                <div class="shop-feature-text">
+                    <h3>High Quality</h3>
+                    <p>Crafted from top materials</p>
+                </div>
+            </div>
+            <div class="shop-feature">
+                <img src="public/images/shop/shipping.png" alt="">
+                <div class="shop-feature-text">
+                    <h3>All Profits Donated</h3>
+                    <p>Profits are donated to UNICEF</p>
+                </div>
+            </div>
+            <div class="shop-feature">
+                <img src="public/images/shop/customer-support.png" alt="">
+                <div class="shop-feature-text">
+                    <h3>24 / 7 Support</h3>
+                    <p>Dedicated support</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="shop-checkout-content">
+            <form action="#" id="billing-details">
+                <div class="shop-billing-details">
+                    <div class="billing-col-1">
+                        <h2>Billing Details</h2>
+                        <label for="fname">First Name</label><br>
+                        <input type="text" name="fname" id="fname" required><br>
+
+                        <label for="lname">Last Name</label><br>
+                        <input type="text" name="lname" id="lname" required><br>
+
+                        <label for="country">Country</label><br>
+                        <input type="text" name="country" id="country" required><br>
+
+                        <label for="address">Street Address</label><br>
+                        <input type="text" name="address" id="address" required><br>
+
+                        <label for="town">Town / City</label><br>
+                        <input type="text" name="town" id="town" required><br>
+
+                        <label for="province">Province</label><br>
+                        <input type="text" name="province" id="province" required><br>
+
+                        <label for="zip">ZIP Code</label><br>
+                        <input type="text" name="zip" id="zip" required><br>
+
+                        <label for="phone">Phone</label><br>
+                        <input type="text" name="phone" id="phone" required><br>
+
+                        <label for="email">E-Mail address</label><br>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="billing-col-2">
+                        <div class="check-out-items-head">
+                            <p>Product</p>
+                            <p>Subtotal</p>
+                        </div>
+                        <div class="check-out-items">
+                            
+                        </div>
+                        <div class="check-out-totals">
+                            <div class="check-out-subtotal">
+                                <p>Subtotal</p>
+                                <p id="check-out-subtotal-val"></p>
+                            </div>
+                            <div class="check-out-total">
+                                <p>Total</p>
+                                <p id="check-out-total-val"></p>
+                            </div>
+                        </div>
+
+                        <div class="line"></div>
+
+                        <div class="check-out-radio">
+                            <input type="radio" name="pay-method" id="bank" required>
+                            <label for="bank">Direct Bank Transfer</label><br>
+
+                            <input type="radio" name="pay-method" id="cash">
+                            <label for="cash">Cash on Delivery</label>
+                        </div>
+
+                        <p>
+                            Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes.
+                        </p>
+
+                        <input type="submit" value="Place Order" class="check-out">
+                    </div>
+                </div>
+            </form> 
+        </div>
+    </div>
+    <div class="footer">
+        <p>	&#169;2024, InHealth. All Rights Reserved</p>
+        <p>Created by: <span><a href="ammar.html" target="_blank">Ammar Jesliy</a></span>
+    </div>
+
+
+
+    <script src="nav.js"></script>
+    <script src="shop.js"></script>
+</body>
+</html>
